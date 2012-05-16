@@ -91,6 +91,7 @@ static NSString *const Str_TimeComponentAbbrMinutes_M    = @"TimeComponentAbbrMi
 // /* Abbreviated long time interval format (> 1 minute). */
 // "TimeComponentAbbrMinutes_M" = "%d mins";
 
+NSString *LocStr(NSString *const key);
 
 // Localized string accessor
 NSString *LocStr(NSString *const key) {
@@ -170,6 +171,7 @@ NSString *LocStr(NSString *const key) {
 
 - (void) dealloc {
     [formatter release];
+	[super dealloc];
 }
 
 - (NSString *) stringForObjectValue:(NSDateComponents *)components {
